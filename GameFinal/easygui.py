@@ -323,7 +323,7 @@ def buttonbox(msg="",title=" "
                     try:
                         pil_Image = PIL.Image.open(imageFilename)
                         tk_Image = PIL.ImageTk.PhotoImage(pil_Image)    
-                    except Exception, e:
+                    except Exception as e:
                         msg += ImageErrorMsg % (imageFilename,
                             "The Python Imaging Library could not convert this file to a displayable image."
                             +"\n"+ str(e))              

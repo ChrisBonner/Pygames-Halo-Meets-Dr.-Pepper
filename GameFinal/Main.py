@@ -8,6 +8,7 @@ global scorehealth
 global scoreenemystart
 global scorebonus
 global PlayerName
+global difficulty
 
 try:
 #sound
@@ -45,7 +46,9 @@ def main():
     global scorehealth
     global scoreenemystart
     global scorebonus
+    global difficulty
     global score
+
     #screen load
     pygame.display.set_caption("Halo - Chris Bonner")
     background = pygame.Surface(screen.get_size())
@@ -400,6 +403,8 @@ def StartScreen():
     #globals
     global userStart
     global PlayerName
+    global difficulty
+
     userStart = 0
     #screen setup
     pygame.display.set_caption("Halo - Chris Bonner")
@@ -492,6 +497,8 @@ def StartScreen():
         
 #def difficultyScreen
 def difficultyScreen():
+    global difficulty
+
     #screen setup
     pygame.display.set_caption("Halo - Chris Bonner")
     background = pygame.Surface(screen.get_size())
@@ -592,7 +599,6 @@ def difficultyScreen():
                     elif userStart == 0:
                         StartScreen()
                 elif  'difficulty' not in globals():
-                    global difficulty
                     difficulty = 0
                     if userStart == 1:
                         sndMenu.stop()
@@ -608,7 +614,6 @@ def difficultyScreen():
                     elif userStart == 0:
                         StartScreen()
                 elif  'difficulty' not in globals():
-                    global difficulty
                     difficulty = 1
                     if userStart == 1:
                         sndMenu.stop()
@@ -624,7 +629,6 @@ def difficultyScreen():
                     elif userStart == 0:
                         StartScreen()
                 elif  'difficulty' not in globals():
-                    global difficulty
                     difficulty = 2
                     if userStart == 1:
                         sndMenu.stop()
@@ -640,7 +644,6 @@ def difficultyScreen():
                     elif userStart == 0:
                         StartScreen()
                 elif  'difficulty' not in globals():
-                    global difficulty
                     difficulty = 3
                     if userStart == 1:
                         sndMenu.stop()
@@ -670,7 +673,8 @@ def BOSS():
     global bossstartlife
     global scorehealth
     global scorebonus
-    
+    global difficulty
+
     #screen set up
     pygame.display.set_caption("Halo - Chris Bonner")
     background = pygame.Surface(screen.get_size())
@@ -680,8 +684,6 @@ def BOSS():
     #sound
     sndBoss.play(-1)
     sndRifle.set_volume(0.2)
-    print sndLaser.get_buffer()
-    print sndRifle.get_buffer()
     
     try:
     #sprite pics
@@ -1112,6 +1114,8 @@ def ScoreScreen():
     global scoreenemystart
     global scorebonus
     global PlayerName
+    global difficulty
+
     userStart = 0
     #screen setup
     pygame.display.set_caption("Halo - Chris Bonner")
